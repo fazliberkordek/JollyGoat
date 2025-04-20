@@ -1,0 +1,34 @@
+/* image container */
+.image-container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* container for top images */
+.main-image{
+    width: 100%;
+    max-width: 100%px;
+    object-fit:cover;
+    display: block;
+}
+.overlay{
+    position: absolute;
+    top: auto;
+    left: auto;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+.top-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+  }
