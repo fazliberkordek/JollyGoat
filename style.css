@@ -1,34 +1,12 @@
 /* image container */
-.image-container{
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* container for top images */
-.main-image{
-    width: 100%;
-    max-width: 100%px;
-    object-fit:cover;
-    display: block;
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f3f4f6;
+
 }
-.overlay{
-    position: absolute;
-    top: auto;
-    left: auto;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-.top-image {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
-  }
