@@ -8,5 +8,25 @@
 body {
     font-family: "Times New Roman", Times, serif;
     background-color: #f3f4f6;
+}
 
+.hero {
+    background-color: #0e1c35;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+}
+.mascot-placeholder{
+    font-size: 48px;
+}
+
+.hero-text h1{
+    font-size: 2.2rem;
+    color:#4dde58 ;
+}
+.hero-text p1{
+    margin-top: 4px;
+    font-size: 1rem;
 }
