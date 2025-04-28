@@ -1,6 +1,7 @@
 # JollyGoat - AI-Powered Translation App
 
-![JollyGoat Logo](public/logo.png)
+![Screenshot 2025-04-28 at 15 43 49](https://github.com/user-attachments/assets/89a28ffb-7424-47b0-9aa3-1e8e7dc84b30)
+
 
 ## Overview
 
