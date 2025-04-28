@@ -1,32 +1,132 @@
-/* image container */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
 }
 
-.hero {
-    background-color: #0e1c35;
-    color: white;
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #0c2545;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    padding: 24px;
-    gap: 16px;
-}
-.mascot-placeholder{
-    font-size: 48px;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 
-.hero-text h1{
-    font-size: 2.2rem;
-    color:#4dde58 ;
+.logo img {
+    height: 40px;
+    margin-right: 10px;
 }
-.hero-text p1{
-    margin-top: 4px;
-    font-size: 1rem;
+
+.logo-text {
+    color: #4cd137;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tagline {
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.lightning {
+    color: #f39c12;
+    margin-left: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #f1f5f9;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.language-option input {
+    margin-right: 10px;
+}
+
+.flag {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.button {
+    background-color: #1e56a0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #174584;
+}
+
+.world-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
 }
