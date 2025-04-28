@@ -3,92 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PollyGlot - Perfect Translation Every Time</title>
+    <title>AI Translator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Input Card -->
-        <div class="card">
-            <div class="header">
-                <div class="world-map"></div>
-                <div class="header-content">
-                    <div class="logo">
-                        <svg width="40" height="40" viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="20" fill="#4cd137" />
-                            <path d="M70,30 Q90,20 75,50 Q85,70 60,65 Q50,80 40,65 Q20,70 25,50 Q10,30 30,35 Q40,15 55,25 Q65,15 70,30" fill="#3498db" />
-                            <circle cx="45" cy="45" r="5" fill="white" />
-                            <circle cx="47" cy="43" r="2" fill="black" />
-                        </svg>
-                        <span class="logo-text">PollyGlot</span>
-                    </div>
-                    <div class="tagline">Perfect Translation Every Time</div>
+        <h1>AI Translator</h1>
+        
+        <div class="translation-container">
+            <div class="input-section">
+                <label for="sourceLanguage">Source Language:</label>
+                <select id="sourceLanguage">
+                    <option value="auto">Auto-detect</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Arabic">Arabic</option>
+                </select>
+                
+                <textarea id="sourceText" placeholder="Enter text to translate..."></textarea>
+            </div>
+            
+            <div class="center-controls">
+                <button id="translateBtn">Translate</button>
+                <div id="loadingIndicator" class="loading-indicator hidden">
+                    <div class="spinner"></div>
+                    <p>Translating...</p>
                 </div>
             </div>
-            <div class="content">
-                <div class="section-title">
-                    Text to translate <span class="lightning">⚡</span>
-                </div>
-                <textarea id="sourceText" placeholder="Enter text to translate...">How are you?</textarea>
+            
+            <div class="output-section">
+                <label for="targetLanguage">Target Language:</label>
+                <select id="targetLanguage">
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Arabic">Arabic</option>
+                </select>
                 
-                <div class="section-title">
-                    Select language <span class="lightning">⚡</span>
-                </div>
-                <div class="language-options">
-                    <div class="language-option">
-                        <input type="radio" id="french" name="language" value="fr" checked>
-                        <label for="french">French</label>
-                        <span class="flag">🇫🇷</span>
-                    </div>
-                    <div class="language-option">
-                        <input type="radio" id="spanish" name="language" value="es">
-                        <label for="spanish">Spanish</label>
-                        <span class="flag">🇪🇸</span>
-                    </div>
-                    <div class="language-option">
-                        <input type="radio" id="japanese" name="language" value="ja">
-                        <label for="japanese">Japanese</label>
-                        <span class="flag">🇯🇵</span>
-                    </div>
-                </div>
-                
-                <button id="translateBtn" class="button">Translate</button>
+                <textarea id="translatedText" placeholder="Translation will appear here..." readonly></textarea>
+                <button id="copyBtn" class="copy-btn">Copy Translation</button>
             </div>
         </div>
         
-        <!-- Output Card -->
-        <div class="card">
-            <div class="header">
-                <div class="world-map"></div>
-                <div class="header-content">
-                    <div class="logo">
-                        <svg width="40" height="40" viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="20" fill="#4cd137" />
-                            <path d="M70,30 Q90,20 75,50 Q85,70 60,65 Q50,80 40,65 Q20,70 25,50 Q10,30 30,35 Q40,15 55,25 Q65,15 70,30" fill="#3498db" />
-                            <circle cx="45" cy="45" r="5" fill="white" />
-                            <circle cx="47" cy="43" r="2" fill="black" />
-                        </svg>
-                        <span class="logo-text">PollyGlot</span>
-                    </div>
-                    <div class="tagline">Perfect Translation Every Time</div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="section-title">
-                    Original text <span class="lightning">⚡</span>
-                </div>
-                <textarea id="originalText" disabled>How are you?</textarea>
-                
-                <div class="section-title">
-                    Your translation <span class="lightning">⚡</span>
-                </div>
-                <textarea id="translatedText" disabled>Comment allez-vous?</textarea>
-                
-                <button id="startOverBtn" class="button">Start Over</button>
-            </div>
+        <div class="attribution">
+            Powered by OpenAI API
         </div>
     </div>
-
-    <script src="script.js"></script>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
